@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+  <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".9">
+    <path d="M92 168 L188 96 L286 152 L262 268 L356 330 L488 286"/>
+    <path d="M286 152 L330 262 L356 330"/>
+    <path d="M262 268 L164 344 L196 462 L328 486 L356 330"/>
+    <path d="M164 344 L92 168"/>
+    <path d="M488 286 L516 414 L328 486"/>
+  </g>
+  <g fill="currentColor">
+    <circle cx="92" cy="168" r="7"/>
+    <circle cx="188" cy="96" r="4.5"/>
+    <circle cx="286" cy="152" r="9"/>
+    <circle cx="262" cy="268" r="5"/>
+    <circle cx="330" cy="262" r="3.5"/>
+    <circle cx="356" cy="330" r="8"/>
+    <circle cx="488" cy="286" r="5.5"/>
+    <circle cx="164" cy="344" r="6"/>
+    <circle cx="196" cy="462" r="4"/>
+    <circle cx="328" cy="486" r="7"/>
+    <circle cx="516" cy="414" r="4.5"/>
+  </g>
+</svg>
