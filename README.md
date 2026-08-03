@@ -24,15 +24,11 @@ python3 -m http.server 8000
 
 Tudo o que é seu está marcado no código. Procure por estes pontos:
 
-### 1. Telefone do WhatsApp
+### 1. Telefone do WhatsApp ✔ já configurado
 
-Aparece **duas vezes** no `index.html` (no botão da chamada final e no botão
-flutuante). Procure por `5500000000000` e troque pelo seu número, no formato
-`55` + DDD + número, só dígitos:
-
-```
-https://wa.me/5541999998888?text=Oi%20Gabi!...
-```
+Está como **(47) 99643-4126** nos dois botões (o da chamada final e o
+flutuante). Se um dia mudar, procure por `5547996434126` no `index.html` — o
+formato é `55` + DDD + número, só dígitos.
 
 ### 2. Instagram
 
