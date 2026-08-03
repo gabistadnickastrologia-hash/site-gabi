@@ -30,9 +30,10 @@ Está como **(47) 99643-4126** nos dois botões (o da chamada final e o
 flutuante). Se um dia mudar, procure por `5547996434126` no `index.html` — o
 formato é `55` + DDD + número, só dígitos.
 
-### 2. Instagram
+### 2. Instagram ✔ já configurado
 
-Procure por `instagram.com/gabistadnickastrologia` e ajuste se o @ for outro.
+Está como **@gabistadnick**. Para mudar, procure por `instagram.com/gabistadnick`
+no `index.html`.
 
 ### 3. Valores
 
