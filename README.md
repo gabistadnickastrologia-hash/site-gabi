@@ -35,15 +35,38 @@ formato é `55` + DDD + número, só dígitos.
 Está como **@gabistadnick**. Para mudar, procure por `instagram.com/gabistadnick`
 no `index.html`.
 
-### 3. Valores
+### 3. Valores ✔ já configurados
 
-**Os preços que estão no site são exemplos** — coloquei valores plausíveis só
-para o layout não ficar vazio. Procure por `R$` no `index.html`: são 7
-ocorrências (4 leituras + 3 previsões). O formato segue o da referência:
+| Leitura | Valor |
+| --- | --- |
+| Mapa Astral | R$350 |
+| Revolução Solar | R$260 |
+| Astrocartografia | R$260 |
+
+Estão no `index.html`, um em cada card. Procure por `data-icon="valor"`:
 
 ```html
-<li data-icon="◈"><strong>R$447 à vista</strong> ou 6x R$82</li>
+<li data-icon="valor"><strong>R$350</strong></li>
 ```
+
+Se quiser mostrar parcelamento, é só escrever na mesma linha:
+
+```html
+<li data-icon="valor"><strong>R$350 à vista</strong> ou 3x R$120</li>
+```
+
+### 3b. O que ainda é suposição minha
+
+Estes pontos eu preenchi para o layout funcionar. Confira antes de publicar,
+porque são compromissos com quem contrata:
+
+- **Duração de cada leitura** (1h30 no mapa natal, 1h nas outras);
+- **O que é entregue** (PDF, gravação, 7 dias de dúvidas abertas);
+- **Prazos de entrega** (gravação em 24h, material em 5 dias úteis);
+- **Formas de pagamento** citadas nas perguntas frequentes (Pix e cartão,
+  remarcação com 24h de aviso);
+- **Condição especial** para quem fecha mais de uma leitura — está no site
+  sem percentual, só como convite para conversar.
 
 ### 4. Textos
 
@@ -68,9 +91,7 @@ código.
 | `divisor-leituras.jpg` | faixa antes dos pacotes | horizontal, 2000×900 |
 | `leitura-mapa.jpg` | card Mapa Astral | vertical, 1000×1250 |
 | `leitura-solar.jpg` | card Revolução Solar | vertical, 1000×1250 |
-| `leitura-sinastria.jpg` | card Sinastria | vertical, 1000×1250 |
-| `leitura-bebe.jpg` | card Mapa do Bebê | vertical, 1000×1250 |
-| `transitos.jpg` | bloco "Previsões" | horizontal, 2000×1300 |
+| `leitura-astrocartografia.jpg` | card Astrocartografia | vertical, 1000×1250 |
 | `og.jpg` | miniatura ao compartilhar o link | 1200×630 |
 
 Dicas:
@@ -78,7 +99,7 @@ Dicas:
 - Nas fotos de capa e dos blocos largos há texto claro por cima, então
   funcionam melhor imagens de **tom médio a escuro**. O site já aplica um véu
   escuro por cima para garantir a leitura.
-- As artes do seu Instagram entram bem nos quatro cards verticais.
+- As artes do seu Instagram entram bem nos três cards verticais.
 - Comprima antes de subir (TinyPNG, Squoosh) — imagem pesada derruba a
   velocidade do site.
 
