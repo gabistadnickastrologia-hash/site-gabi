@@ -1,2 +1,10 @@
 .DS_Store
 Thumbs.db
+
+# fotos originais (arquivos grandes, direto da câmera) — só as versões
+# tratadas em assets/img/ precisam ir para o site
+fotos-originais/*.jpg
+fotos-originais/*.jpeg
+fotos-originais/*.png
+fotos-originais/*.JPG
+fotos-originais/*.HEIC

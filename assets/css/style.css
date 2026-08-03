@@ -36,6 +36,12 @@
 
   /* movimento */
   --ease: cubic-bezier(.22, 1, .36, 1);
+
+  /* degradês que aparecem enquanto (ou caso) não houver foto */
+  --degrade-capa:  radial-gradient(120% 90% at 50% 12%, #6E6248 0%, #4A4133 45%, #2B241C 100%);
+  --degrade-bloco: linear-gradient(145deg, #574C3B 0%, #352D23 55%, #221C15 100%);
+  --degrade-faixa: linear-gradient(120deg, #BEB18B 0%, #C68B5D 100%);
+  --degrade-card:  linear-gradient(160deg, #D3C8A9 0%, #BEB18B 48%, #C68B5D 100%);
 }
 
 /* ─── 2. BASE ──────────────────────────────────────────────── */
@@ -298,10 +304,7 @@ a { color: inherit; }
   text-align: center;
   color: var(--creme-claro);
   overflow: hidden;
-  /* a foto entra por cima; se o arquivo não existir, fica o degradê */
-  background-image:
-    var(--photo, none),
-    radial-gradient(120% 90% at 50% 12%, #6E6248 0%, #4A4133 45%, #2B241C 100%);
+  background-image: var(--degrade-capa);
   background-size: cover;
   background-position: center;
 }
@@ -423,9 +426,7 @@ a { color: inherit; }
   padding: clamp(4rem, 9vw, 7rem) var(--gutter);
   color: var(--creme-claro);
   overflow: hidden;
-  background-image:
-    var(--photo, none),
-    linear-gradient(145deg, #574C3B 0%, #352D23 55%, #221C15 100%);
+  background-image: var(--degrade-bloco);
   background-size: cover;
   background-position: center;
 }
@@ -455,9 +456,7 @@ a { color: inherit; }
   min-height: clamp(280px, 46vh, 460px);
   display: grid; place-items: center;
   overflow: hidden;
-  background-image:
-    var(--photo, none),
-    linear-gradient(120deg, var(--areia) 0%, var(--caramelo) 100%);
+  background-image: var(--degrade-faixa);
   background-size: cover;
   background-position: center;
 }
@@ -495,26 +494,29 @@ a { color: inherit; }
   aspect-ratio: 5 / 6;
   border-radius: var(--radius);
   overflow: hidden;
-  display: grid; place-items: center;
-  background-image:
-    var(--photo, none),
-    linear-gradient(160deg, var(--areia-clara) 0%, var(--areia) 48%, var(--caramelo) 100%);
+  background-image: var(--degrade-card);
   background-size: cover;
   background-position: center;
   box-shadow: 0 22px 48px -28px rgba(43, 36, 28, .55);
 }
+/* véu no pé da imagem: segura a marca legível sobre qualquer foto */
 .card__media::after {
   content: '';
   position: absolute; inset: 0;
-  background: radial-gradient(80% 70% at 50% 40%, transparent, rgba(43,36,28,.22));
+  background:
+    linear-gradient(to top, rgba(43, 36, 28, .5) 0%, rgba(43, 36, 28, 0) 34%),
+    radial-gradient(90% 80% at 50% 35%, transparent, rgba(43, 36, 28, .16));
 }
+/* marca da leitura: canto inferior esquerdo, discreta sobre a foto */
 .card__glyph {
-  position: relative; z-index: 2;
-  width: clamp(3.6rem, 7vw, 5.4rem);
+  position: absolute; z-index: 2;
+  left: clamp(.9rem, 2.2vw, 1.4rem);
+  bottom: clamp(.9rem, 2.2vw, 1.4rem);
+  width: clamp(2rem, 3.4vw, 2.6rem);
   height: auto;
   color: var(--creme-claro);
-  opacity: .6;
-  filter: drop-shadow(0 2px 18px rgba(43, 36, 28, .35));
+  opacity: .82;
+  filter: drop-shadow(0 1px 6px rgba(43, 36, 28, .55));
 }
 
 .card__title {
@@ -843,6 +845,29 @@ a { color: inherit; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ─── 23. AS SUAS FOTOS ───────────────────────────────────────
+   Cada regra aponta para um arquivo em assets/img/. Salve a foto
+   com o nome indicado e ela entra sozinha — não precisa mexer aqui.
+   Se o arquivo não existir, o degradê de reserva assume e o site
+   continua funcionando normalmente.
+
+   Os caminhos começam com ../img/ porque são relativos a esta pasta
+   (assets/css/). Um url() dentro de variável CSS é sempre resolvido
+   a partir do arquivo .css, nunca do HTML — por isso as fotos moram
+   aqui e não lá.
+
+   Este bloco fica no fim do arquivo de propósito: assim ele vence as
+   regras de fundo definidas antes, sem precisar de !important.
+   ──────────────────────────────────────────────────────────── */
+.hero    { background-image: url('../img/hero.jpg'),             var(--degrade-capa); }
+#porque  { background-image: url('../img/porque.jpg'), var(--degrade-bloco); }
+
+.divider { background-image: url('../img/divisor-leituras.jpg'), var(--degrade-faixa); }
+
+.card__media--mapa   { background-image: url('../img/leitura-mapa.jpg'),            var(--degrade-card); }
+.card__media--solar  { background-image: url('../img/leitura-solar.jpg'),           var(--degrade-card); }
+.card__media--astro  { background-image: url('../img/leitura-astrocartografia.jpg'), var(--degrade-card); }
 
 /* ─── 22. IMPRESSÃO ───────────────────────────────────────── */
 @media print {
