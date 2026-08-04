@@ -4,18 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Gabi Stadnick · Astrologia</title>
-<meta name="description" content="Leitura de mapa astral, revolução solar, sinastria e astrologia parental. Uma astrologia feita de escuta, sem julgamento e com pé no chão.">
-<meta name="theme-color" content="#BEB18B">
+<meta name="description" content="Astrologia aplicada à vida real: menos previsão, mais direção. Mapa astral, revolução solar e astrocartografia com leitura prática e atendimento online.">
+<meta name="theme-color" content="#12293B">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Gabi Stadnick · Astrologia">
-<meta property="og:description" content="O céu do dia em que você chegou tem muito a te contar. Leituras de mapa astral com escuta e acolhimento.">
+<meta property="og:description" content="Consciência gera escolha. Escolha gera mudança. Astrologia aplicada, para quem quer entender o padrão e sair dele.">
 <meta property="og:image" content="assets/img/og.jpg">
 <meta property="og:locale" content="pt_BR">
 
 <link rel="icon" href="assets/img/marca.svg" type="image/svg+xml">
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/oswald-300-700-latin.woff2" crossorigin>
-<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poppins-300-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/poiret-one-400-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jost-300-600-latin.woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/fonts.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -26,9 +26,10 @@
 <!-- ═══════════════ NAVEGAÇÃO ═══════════════ -->
 <header class="nav" id="nav">
   <div class="nav__inner">
-    <a class="nav__brand" href="#topo" aria-label="Gabi Stadnick Astrologia — início">
-      <span class="nav__brand-mark" aria-hidden="true"></span>
-      <span class="nav__brand-name">gabi stadnick</span>
+    <a class="nav__brand marca marca--linha" href="#topo" aria-label="Gabi Stadnick Astrologia — início">
+      <!-- o logo entra sozinho quando existir assets/img/logo.svg -->
+      <img class="marca__img" src="assets/img/logo.svg" alt="Gabi Stadnick Astrologia">
+      <span class="marca__texto" aria-hidden="true">Gabi Stadnick</span>
     </a>
 
     <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
@@ -37,9 +38,10 @@
 
     <nav class="nav__menu" id="navMenu" aria-label="Navegação principal">
       <a href="#sobre">Quem sou</a>
-      <a href="#porque">Por quê</a>
+      <a href="#padrao">O padrão</a>
       <a href="#como">Como funciona</a>
-      <a href="#pacotes">Leituras</a>
+      <a href="#leituras">Leituras</a>
+      <a href="#ebook">Ebook</a>
       <a href="#perguntas">Dúvidas</a>
       <a class="nav__cta" href="#contato">Agendar</a>
     </nav>
@@ -54,18 +56,23 @@
   <div class="starfield" aria-hidden="true"></div>
 
   <div class="hero__content">
-    <p class="eyebrow reveal">Astrologia · Leituras individuais · Online</p>
+    <p class="eyebrow reveal">Astrologia aplicada · Atendimento online</p>
 
-    <h1 class="hero__wordmark reveal" data-delay="1">
-      gabi<span class="hero__star" aria-hidden="true"></span>stadnick
-    </h1>
-    <p class="hero__sub reveal" data-delay="2">ASTROLOGIA</p>
+    <div class="marca marca--capa reveal" data-delay="1">
+      <img class="marca__img" src="assets/img/logo.svg" alt="Gabi Stadnick Astrologia">
+      <div class="marca__texto" aria-hidden="true">
+        <span class="marca__nome">Gabi Stadnick</span>
+        <span class="marca__tag">Astrologia</span>
+      </div>
+    </div>
 
-    <p class="script hero__script reveal" data-delay="3">o céu daquele dia ainda fala de você</p>
+    <p class="frase hero__frase reveal" data-delay="2">
+      Consciência gera escolha.<br>Escolha gera mudança.
+    </p>
 
-    <div class="hero__actions reveal" data-delay="4">
-      <a class="btn btn--solid" href="#pacotes">Ver as leituras</a>
-      <a class="btn btn--ghost" href="#contato">Quero agendar</a>
+    <div class="hero__actions reveal" data-delay="3">
+      <a class="btn btn--claro" href="#leituras">Ver as leituras</a>
+      <a class="btn btn--ghost" href="#contato">Falar comigo</a>
     </div>
   </div>
 
@@ -75,133 +82,135 @@
 </section>
 
 <!-- ═══════════════ QUEM SOU ═══════════════ -->
-<section class="section section--sand watermark" id="sobre">
+<section class="section section--bruma watermark" id="sobre">
   <div class="watermark__art" aria-hidden="true"></div>
 
   <div class="wrap wrap--narrow">
-    <h2 class="display display--mixed reveal">
-      Quem é a <span class="script">gabi</span>?
-    </h2>
+    <h2 class="display reveal">Quem é a Gabi</h2>
 
     <div class="prose reveal" data-delay="1">
-      <p>Meu trabalho é feito de escuta.</p>
+      <p>Eu sou <strong>engenheira e astróloga</strong>.</p>
 
-      <p>Eu acredito que o mapa astral não existe pra te encaixar numa gaveta,
-      e sim pra te devolver uma linguagem — um jeito de nomear aquilo que você
-      sempre sentiu e nunca soube explicar direito.</p>
+      <p>Passei anos aprendendo a ler sistemas: encontrar padrões, isolar
+      variáveis e entender por que as coisas quebram. Depois descobri que dava
+      para fazer o mesmo com uma vida — e era isso que eu queria fazer.</p>
 
-      <p>Não leio o seu mapa pra dizer quem você deveria ser. Leio pra mostrar
-      o material com que você chegou aqui: as facilidades, os nós, os ciclos
-      que se repetem e aquilo que pede tempo. O resto é seu.</p>
+      <p>Não trabalho com previsão. Trabalho com <strong>direção</strong>.</p>
 
-      <p>Cada leitura é uma conversa. Sem jargão indecifrável, sem previsão de
-      catástrofe, sem promessa mágica. Astrologia com pé no chão e coração
-      aberto — do jeito que eu gostaria que tivessem feito comigo na primeira vez.</p>
+      <p>O mapa astral, do jeito que eu leio, não é oráculo: é diagnóstico. Ele
+      mostra o padrão que você repete, o que esse padrão está te custando e onde
+      está a alavanca para sair dele. O que você faz com essa informação é a
+      parte que só cabe a você.</p>
+
+      <p>Eu não vou romantizar o seu processo. Vou te mostrar o que está
+      acontecendo, com clareza, e te ajudar a decidir o próximo passo.</p>
     </div>
 
-    <p class="signature script reveal" data-delay="2">com carinho, gabi</p>
+    <p class="frase citacao reveal" data-delay="2">
+      O problema não é o ciclo — é a forma como você responde a ele.
+    </p>
   </div>
 </section>
 
-<!-- ═══════════════ POR QUE ═══════════════ -->
-<section class="feature" id="porque">
+<!-- ═══════════════ O PADRÃO ═══════════════ -->
+<section class="feature" id="padrao">
   <div class="feature__veil"></div>
 
   <div class="feature__panel reveal">
-    <h2 class="display display--stack">
-      Por que ler<br>o seu mapa?
-    </h2>
+    <h2 class="display display--stack">Você não está<br>perdida.<br>Você está<br>repetindo.</h2>
     <div class="prose prose--light">
-      <p>Porque você não chegou aqui por acaso.</p>
-      <p>Existe um desenho no céu do minuto exato em que você respirou pela
-      primeira vez — e ele diz muito sobre o seu jeito de amar, de trabalhar,
-      de se defender e de recomeçar.</p>
-      <p>Ler esse mapa é ganhar um mapa mesmo: você continua andando, mas
-      para de andar às cegas.</p>
+      <p>A mesma discussão, com outra pessoa. O mesmo travamento na hora de
+      decidir. A mesma sensação de que falta algo que você não consegue nomear.</p>
+
+      <p>Isso não é azar nem coincidência — é padrão. E padrão tem estrutura,
+      tem origem e tem ponto de saída.</p>
+
+      <p>Ler o seu mapa é enxergar essa estrutura de fora pela primeira vez.
+      Depois disso, repetir vira escolha — e não automatismo.</p>
     </div>
   </div>
 </section>
 
 <!-- ═══════════════ COMO FUNCIONA ═══════════════ -->
-<section class="section section--sand" id="como">
+<section class="section section--papel" id="como">
   <div class="wrap wrap--narrow">
-    <h2 class="display reveal">Como tudo acontece?</h2>
+    <h2 class="display reveal">Como funciona</h2>
     <p class="lead reveal" data-delay="1">
-      Cada leitura é única, mas o caminho até ela é sempre o mesmo — pra que
-      você chegue tranquila do começo ao fim:
+      Nenhuma etapa aqui é enfeite. Cada uma existe para você chegar ao
+      encontro sabendo o que veio buscar:
     </p>
 
     <ol class="steps">
       <li class="step reveal">
-        <h3 class="script step__title">1. primeiro contato</h3>
-        <p>A gente conversa antes. Você me conta o que está te movendo agora
-        e eu te digo, com honestidade, qual leitura faz sentido — inclusive
-        se for nenhuma.</p>
+        <h3 class="step__title"><span class="step__num">01</span> Primeiro contato</h3>
+        <p>Você me conta o que está travando agora. Eu te digo qual leitura
+        responde a isso — e, se nenhuma responder, eu digo isso também.</p>
       </li>
 
       <li class="step reveal">
-        <h3 class="script step__title">2. seus dados</h3>
-        <p>Preciso de três coisas: <strong>data</strong>, <strong>hora</strong>
-        e <strong>cidade de nascimento</strong>. A hora está na sua certidão
-        de nascimento — e ela muda bastante coisa, então vale a busca.</p>
+        <h3 class="step__title"><span class="step__num">02</span> Seus dados</h3>
+        <p>Preciso de três: <strong>data</strong>, <strong>hora</strong> e
+        <strong>cidade de nascimento</strong>. A hora está na certidão de
+        nascimento e muda bastante coisa — vale procurar.</p>
       </li>
 
       <li class="step reveal">
-        <h3 class="script step__title">3. o estudo</h3>
-        <p>Antes do nosso encontro, eu me sento com o seu mapa. Calculo,
-        cruzo, releio e preparo a leitura inteira pensando em você — nada
-        é improvisado na hora.</p>
+        <h3 class="step__title"><span class="step__num">03</span> O estudo</h3>
+        <p>Eu me sento com o seu mapa antes do nosso encontro. Calculo, cruzo e
+        preparo a leitura inteira pensando no seu caso. Nada é improvisado na
+        hora.</p>
       </li>
 
       <li class="step reveal">
-        <h3 class="script step__title">4. o encontro</h3>
-        <p>Nos vemos por chamada de vídeo, com a conversa gravada pra você
-        rever quantas vezes quiser. É um espaço seguro: pode chorar,
-        interromper, discordar e perguntar de novo.</p>
+        <h3 class="step__title"><span class="step__num">04</span> O encontro</h3>
+        <p>Chamada de vídeo, gravada. Não é uma sessão de acolhimento: é uma
+        conversa de trabalho sobre a sua vida. Pergunte, discorde e me cobre
+        exemplo concreto — é para isso que eu estou ali.</p>
       </li>
 
       <li class="step reveal">
-        <h3 class="script step__title">5. depois</h3>
-        <p>Você recebe a gravação e o material de apoio. E fica com sete dias
-        de canal aberto comigo pra tirar aquelas dúvidas que só aparecem
-        quando a poeira baixa.</p>
+        <h3 class="step__title"><span class="step__num">05</span> Depois</h3>
+        <p>Você recebe a gravação e o material de apoio, e fica com sete dias de
+        canal aberto comigo — porque as perguntas boas só aparecem quando a
+        poeira baixa.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- ═══════════════ DIVISOR: LEITURAS ═══════════════ -->
+<!-- ═══════════════ DIVISOR ═══════════════ -->
 <section class="divider" aria-hidden="true">
   <div class="divider__veil"></div>
-  <p class="divider__title">LEITURAS<span class="script">gabi</span></p>
+  <p class="divider__title">Leituras</p>
 </section>
 
 <!--
   ┌──────────────────────────────────────────────────────────────┐
-  │  VALORES · edite direto aqui                                 │
-  │  Os preços abaixo são EXEMPLOS para você substituir pelos     │
-  │  seus. Procure por "R$" neste arquivo para achar todos.      │
+  │  VALORES · procure por data-icon="valor" para achar cada um  │
+  │  Mapa Astral R$350 · Revolução Solar R$260 ·                 │
+  │  Astrocartografia R$260                                      │
   └──────────────────────────────────────────────────────────────┘
 -->
-<section class="section section--cream" id="pacotes" aria-labelledby="tituloLeituras">
+<section class="section section--bruma" id="leituras" aria-labelledby="tituloLeituras">
   <div class="wrap">
     <h2 class="sr-only" id="tituloLeituras">Leituras</h2>
     <div class="cards">
 
       <article class="card reveal">
         <div class="card__media card__media--mapa" aria-hidden="true">
-          <svg class="card__glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <svg class="card__glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
             <circle cx="32" cy="32" r="13"/><circle cx="32" cy="32" r="3.4" fill="currentColor" stroke="none"/>
             <path d="M32 5v9M32 50v9M5 32h9M50 32h9M12.9 12.9l6.4 6.4M44.7 44.7l6.4 6.4M51.1 12.9l-6.4 6.4M19.3 44.7l-6.4 6.4"/>
           </svg>
         </div>
         <div class="card__body">
-          <h3 class="card__title">1. Mapa Astral</h3>
-          <p class="script card__script">o seu ponto de partida;</p>
+          <p class="card__ordem">Leitura 01</p>
+          <h3 class="card__title">Mapa Astral</h3>
+          <p class="frase card__frase">o diagnóstico completo</p>
           <p class="card__text">
-            A leitura completa do céu do seu nascimento. Estrutura, temperamento,
-            vocação, vínculos e os temas que voltam sempre. Se é a sua primeira
-            vez na astrologia, comece por aqui.
+            A leitura de base. Temperamento, vocação, o jeito como você se
+            defende e o padrão que se repete nos seus vínculos. É por aqui que
+            se começa — sem ela, o resto fica solto.
           </p>
           <ul class="specs">
             <li data-icon="tempo"><strong>Até 1h30</strong> de encontro online e gravado;</li>
@@ -215,23 +224,24 @@
 
       <article class="card card--flip reveal">
         <div class="card__media card__media--solar" aria-hidden="true">
-          <svg class="card__glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <svg class="card__glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
             <path d="M40.5 8a26 26 0 1 0 0 48 21 21 0 0 1 0-48Z"/>
             <path d="M52 14.5v7M55.5 18h-7" opacity=".8"/>
           </svg>
         </div>
         <div class="card__body">
-          <h3 class="card__title">2. Revolução Solar</h3>
-          <p class="script card__script">o ano que começa em você;</p>
+          <p class="card__ordem">Leitura 02</p>
+          <h3 class="card__title">Revolução Solar</h3>
+          <p class="frase card__frase">o plano dos próximos doze meses</p>
           <p class="card__text">
-            Todo aniversário abre um ciclo com clima próprio. Aqui a gente olha
-            os doze meses à frente: onde está o foco, o que amadurece e o que
-            pede paciência. Ideal a partir de um mês antes da data.
+            Todo aniversário abre um ciclo com clima próprio. Aqui a gente
+            define onde colocar energia neste ano, o que amadurece sozinho e o
+            que não vale forçar agora. Ideal a partir de um mês antes da data.
           </p>
           <ul class="specs">
             <li data-icon="tempo"><strong>Até 1h</strong> de encontro online e gravado;</li>
             <li data-icon="entrega">Resumo do <strong>ano em PDF</strong>, mês a mês;</li>
-            <li data-icon="nota">Melhor se você já fez o mapa natal;</li>
+            <li data-icon="nota">Rende mais se você já fez o mapa natal;</li>
             <li data-icon="valor"><strong>R$260</strong></li>
           </ul>
           <a class="card__cta" href="#contato">Quero essa leitura</a>
@@ -240,21 +250,21 @@
 
       <article class="card reveal">
         <div class="card__media card__media--astro" aria-hidden="true">
-          <svg class="card__glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true">
+          <svg class="card__glyph" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
             <circle cx="32" cy="32" r="22"/>
             <path d="M32 10c6 6.6 9 13.9 9 22s-3 15.4-9 22c-6-6.6-9-13.9-9-22s3-15.4 9-22Z"/>
             <path d="M10.6 25h42.8M10.6 39h42.8"/>
           </svg>
         </div>
         <div class="card__body">
-          <h3 class="card__title">3. Astrocartografia</h3>
-          <p class="script card__script">o seu mapa espalhado pelo mundo;</p>
+          <p class="card__ordem">Leitura 03</p>
+          <h3 class="card__title">Astrocartografia</h3>
+          <p class="frase card__frase">onde o seu mapa muda de tom</p>
           <p class="card__text">
-            O mesmo céu de nascimento, lido lugar a lugar. Existem cidades onde
-            a sua carreira respira melhor, outras onde os vínculos se abrem e
-            algumas que mexem com o que você prefere não mexer. Para quem está
-            pensando em mudar, viajar com intenção ou entender por que um certo
-            lugar te transformou.
+            O mesmo mapa, lido lugar a lugar. Existem cidades onde a sua
+            carreira destrava, outras onde os vínculos se abrem e algumas que
+            mexem justamente com o que você evita. Para quem pensa em mudar ou
+            quer entender por que certo lugar te virou do avesso.
           </p>
           <ul class="specs">
             <li data-icon="tempo"><strong>Até 1h</strong> de encontro online e gravado;</li>
@@ -270,17 +280,35 @@
   </div>
 </section>
 
-<!-- ═══════════════ PRAZOS ═══════════════ -->
-<section class="section section--caramel">
+<!-- ═══════════════ EBOOK ═══════════════
+     ✎ FALTAM o título real e o valor do ebook — troque abaixo.
+-->
+<section class="section section--azul" id="ebook">
   <div class="wrap wrap--narrow center">
-    <h2 class="display reveal">Prazos</h2>
-    <p class="script section__script reveal">de entrega</p>
+    <p class="eyebrow reveal">Ebook</p>
+    <h2 class="display reveal" data-delay="1">Sobre amar repetindo<br>o mesmo erro</h2>
+
+    <div class="prose prose--light prose--center reveal" data-delay="2">
+      <p>Se as suas relações parecem trocar de nome mas não de roteiro, o
+      material é sobre isso: por que o padrão se forma, o que ele protege e como
+      se sai dele sem esperar que a outra pessoa mude primeiro.</p>
+      <p>Leitura direta, para aplicar — não para guardar na pasta de downloads.</p>
+    </div>
+
+    <a class="btn btn--claro reveal" data-delay="3" href="#contato">Quero o ebook</a>
+  </div>
+</section>
+
+<!-- ═══════════════ PRAZOS ═══════════════ -->
+<section class="section section--papel">
+  <div class="wrap wrap--narrow center">
+    <h2 class="display reveal">Prazos de entrega</h2>
 
     <ul class="timeline reveal" data-delay="1">
-      <li><span class="timeline__when">na hora</span>
+      <li><span class="timeline__when">Na hora</span>
           <span class="timeline__what">o link do encontro chega assim que a agenda é confirmada;</span></li>
       <li><span class="timeline__when">24 horas</span>
-          <span class="timeline__what">a gravação da nossa conversa vai pro seu e-mail;</span></li>
+          <span class="timeline__what">a gravação da conversa vai para o seu e-mail;</span></li>
       <li><span class="timeline__when">5 dias úteis</span>
           <span class="timeline__what">o material de apoio em PDF, revisado e organizado;</span></li>
       <li><span class="timeline__when">7 dias</span>
@@ -290,56 +318,55 @@
 </section>
 
 <!-- ═══════════════ COMBINAR ═══════════════ -->
-<section class="section section--cream">
+<section class="section section--bruma">
   <div class="wrap wrap--narrow center">
-    <h2 class="display reveal">Quer combinar<br>mais de uma leitura?</h2>
+    <h2 class="display reveal">Mais de uma leitura</h2>
     <div class="prose prose--center reveal" data-delay="1">
-      <p>Porque às vezes uma pergunta só não dá conta da história inteira.</p>
-      <p>O mapa natal conta de onde você veio; a revolução solar, o que o ano
-      pede; a astrocartografia, onde tudo isso ganha outro tom. Juntas, elas
-      se completam — e quem fecha mais de uma leitura tem condição especial.</p>
-      <p>Também dá para presentear alguém: me chame que a gente combina.</p>
+      <p>O mapa natal mostra a estrutura. A revolução solar mostra o momento.
+      A astrocartografia mostra o lugar. Cada uma responde a uma pergunta
+      diferente — e juntas elas fecham o quadro.</p>
+      <p>Quem fecha mais de uma leitura tem condição especial. Também dá para
+      presentear alguém: me chame que a gente combina.</p>
     </div>
     <a class="btn btn--solid reveal" data-delay="2" href="#contato">Montar a minha combinação</a>
   </div>
 </section>
 
 <!-- ═══════════════ DÚVIDAS ═══════════════ -->
-<section class="section section--sand" id="perguntas">
+<section class="section section--papel" id="perguntas">
   <div class="wrap wrap--narrow">
-    <h2 class="display reveal">Perguntas que</h2>
-    <p class="script section__script reveal">sempre chegam</p>
+    <h2 class="display reveal">Dúvidas que sempre chegam</h2>
 
     <div class="faq reveal" data-delay="1">
 
       <details class="faq__item">
         <summary>Não sei a minha hora de nascimento. E agora?</summary>
         <div class="faq__answer">
-          <p>Ela aparece na certidão de nascimento (a de inteiro teor, se a sua
-          for a versão resumida) e também pode ser pedida no cartório ou no
-          hospital. Sem a hora, ainda dá pra fazer muita coisa — só não
-          conseguimos definir o ascendente e as casas com precisão. Me chame
-          que eu te explico o que muda no seu caso.</p>
+          <p>Ela está na certidão de nascimento — na de inteiro teor, se a sua
+          for a versão resumida — e também pode ser pedida no cartório ou no
+          hospital. Sem a hora ainda dá para trabalhar, mas o ascendente e as
+          casas ficam imprecisos, e é justamente aí que mora boa parte da
+          leitura prática. Me chame que eu te digo o que muda no seu caso.</p>
         </div>
       </details>
 
       <details class="faq__item">
-        <summary>Astrologia serve pra prever o futuro?</summary>
+        <summary>Você faz previsão?</summary>
         <div class="faq__answer">
           <p>Não do jeito que costumam vender. O que a astrologia mostra é o
-          clima de um período — o tipo de assunto que fica em pauta e a
-          qualidade do tempo. O que você faz com isso continua sendo escolha
-          sua. Eu não trabalho com previsões fatalistas nem com anúncio de
-          tragédia.</p>
+          tipo de assunto que entra em pauta num período e a qualidade daquele
+          tempo. A decisão continua sendo sua — e é exatamente por isso que a
+          leitura serve para alguma coisa. Não trabalho com fatalismo nem com
+          anúncio de tragédia.</p>
         </div>
       </details>
 
       <details class="faq__item">
-        <summary>Preciso entender de astrologia pra fazer uma leitura?</summary>
+        <summary>Preciso entender de astrologia?</summary>
         <div class="faq__answer">
-          <p>Nenhum. A leitura é em português claro. Se você quiser entender a
-          técnica por trás, eu explico com prazer; se não quiser, também está
-          ótimo — o que importa é o que aquilo diz sobre a sua vida.</p>
+          <p>Nada. A leitura é em português claro, ligada à sua vida concreta.
+          Se quiser entender a técnica por trás, eu explico com prazer; se não
+          quiser, seguimos direto ao ponto.</p>
         </div>
       </details>
 
@@ -347,27 +374,27 @@
         <summary>Como funciona o pagamento?</summary>
         <div class="faq__answer">
           <p>Pix à vista ou cartão parcelado. A agenda é confirmada com o
-          pagamento (ou com metade dele, se preferir dividir em duas etapas).
-          Remarcações são tranquilas com pelo menos 24h de aviso.</p>
+          pagamento — ou com metade dele, se preferir dividir em duas etapas.
+          Remarcação sem problema com pelo menos 24h de aviso.</p>
         </div>
       </details>
 
       <details class="faq__item">
         <summary>Os encontros são presenciais?</summary>
         <div class="faq__answer">
-          <p>Todas as leituras acontecem online, por chamada de vídeo — o que
-          me permite atender de qualquer lugar do Brasil e de fora dele.
-          A conversa é gravada e o arquivo é só seu.</p>
+          <p>Todas as leituras acontecem online, por chamada de vídeo — o que me
+          permite atender de qualquer lugar do Brasil e de fora dele. A conversa
+          é gravada e o arquivo é só seu.</p>
         </div>
       </details>
 
       <details class="faq__item">
         <summary>Astrologia substitui terapia?</summary>
         <div class="faq__answer">
-          <p>Não, e eu faço questão de dizer isso em voz alta. A leitura pode
-          conversar lindamente com um processo terapêutico, mas não ocupa o
-          lugar dele nem de acompanhamento médico. Quando eu perceber que o
-          assunto pede outro tipo de cuidado, eu vou te dizer.</p>
+          <p>Não, e eu faço questão de dizer isso em voz alta. A leitura conversa
+          bem com um processo terapêutico, mas não ocupa o lugar dele nem de
+          acompanhamento médico. Quando eu perceber que o assunto pede outro
+          tipo de cuidado, eu vou te dizer.</p>
         </div>
       </details>
 
@@ -380,14 +407,15 @@
   <div class="watermark__art watermark__art--big" aria-hidden="true"></div>
 
   <div class="wrap wrap--narrow center">
-    <p class="script closing__script reveal">vamos ler juntas o céu<br>do dia em que você chegou?</p>
+    <p class="frase closing__frase reveal">
+      Consciência gera escolha.<br>Escolha gera mudança.
+    </p>
 
     <div class="closing__actions reveal" data-delay="1">
       <!-- WhatsApp (47) 99643-4126 — formato: 55 + DDD + número, só dígitos -->
-      <a class="btn btn--solid" href="https://wa.me/5547996434126?text=Oi%20Gabi!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20leitura." target="_blank" rel="noopener">
+      <a class="btn btn--claro" href="https://wa.me/5547996434126?text=Oi%20Gabi!%20Vim%20pelo%20site%20e%20quero%20agendar%20uma%20leitura." target="_blank" rel="noopener">
         Falar no WhatsApp
       </a>
-      <!-- Instagram @gabistadnick -->
       <a class="btn btn--ghost" href="https://instagram.com/gabistadnick" target="_blank" rel="noopener">
         Ver o Instagram
       </a>
@@ -398,9 +426,12 @@
       <a href="mailto:gabistadnickastrologia@gmail.com">gabistadnickastrologia@gmail.com</a>
     </p>
 
-    <div class="closing__mark reveal" data-delay="3">
-      <span class="closing__wordmark">gabi stadnick</span>
-      <span class="closing__tag">ASTROLOGIA</span>
+    <div class="marca marca--rodape reveal" data-delay="3">
+      <img class="marca__img" src="assets/img/logo.svg" alt="Gabi Stadnick Astrologia">
+      <div class="marca__texto" aria-hidden="true">
+        <span class="marca__nome">Gabi Stadnick</span>
+        <span class="marca__tag">Astrologia</span>
+      </div>
     </div>
   </div>
 </section>

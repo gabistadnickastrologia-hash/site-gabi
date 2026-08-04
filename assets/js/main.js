@@ -80,6 +80,21 @@
     });
   });
 
+  /* ── logo: só troca o texto pela imagem depois que ela carregar ──
+     Assim, se o arquivo do logo não existir, ninguém vê ícone
+     quebrado — fica o nome composto na fonte da marca. */
+  document.querySelectorAll('.marca').forEach(function (marca) {
+    var img = marca.querySelector('.marca__img');
+    if (!img) return;
+    if (img.complete && img.naturalWidth > 0) {
+      marca.classList.add('marca--ok');
+    } else {
+      img.addEventListener('load', function () {
+        if (img.naturalWidth > 0) marca.classList.add('marca--ok');
+      });
+    }
+  });
+
   /* ── ano do rodapé ───────────────────────────────────── */
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();

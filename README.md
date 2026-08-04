@@ -3,9 +3,31 @@
 Site institucional de página única. HTML, CSS e JavaScript puros — sem build,
 sem dependências, sem `npm install`. É só abrir o `index.html`.
 
-A direção de arte segue o catálogo da niná.r enviado como referência: paleta de
-areia, caramelo e creme; títulos condensados em caixa-alta; manuscrito como
-acento; fotografia sangrada de ponta a ponta.
+A direção de arte sai do **logo e do dossiê da marca**: o azul da identidade em
+três profundidades, tipografia geométrica art déco no mesmo espírito do
+logotipo, e o tom de voz do dossiê — direto, prático, sem romantizar processo.
+O ritmo editorial (foto sangrada alternando com blocos de texto) vem do
+catálogo enviado como referência.
+
+**Paleta** — todas as combinações do site passam de 4,5:1 de contraste.
+
+| Token | Cor | Onde |
+| --- | --- | --- |
+| `--azul` | `#3B76A4` | a cor do logo, acento |
+| `--azul-fundo` | `#2C5C82` | blocos de fundo cheio |
+| `--azul-noite` | `#12293B` | capa, fecho e rodapé |
+| `--azul-claro` | `#8FB6D2` | texto e traços sobre escuro |
+| `--bruma` | `#DDE8F0` | seções claras |
+| `--papel` | `#F4F8FA` | fundo da página |
+| `--tinta` | `#10293A` | texto sobre claro |
+
+> O azul foi tirado a olho das imagens do logo. Se não estiver exato, corrija
+> **só a linha `--azul`** no topo de `assets/css/style.css` — o resto da paleta
+> acompanha.
+
+**Tipografia** — Poiret One nos títulos (mesma construção geométrica do
+logotipo), Jost no texto corrido e Cormorant Garamond em itálico nas frases de
+marca.
 
 ---
 
@@ -55,7 +77,23 @@ Se quiser mostrar parcelamento, é só escrever na mesma linha:
 <li data-icon="valor"><strong>R$350 à vista</strong> ou 3x R$120</li>
 ```
 
-### 3b. O que ainda é suposição minha
+### 3b. O logo
+
+Salve o logo em `assets/img/logo.svg` (ou `.png` com fundo transparente,
+trocando a extensão nas três linhas `marca__img` do `index.html`). Use a
+**versão azul** — sobre os fundos escuros o site a converte para branco
+sozinho, então basta um arquivo.
+
+Enquanto o arquivo não existir, aparece o nome composto em Poiret One, que é da
+mesma família de formas do logotipo. O site nunca mostra ícone quebrado.
+
+### 3c. O ebook
+
+Está no site com um título e um texto que **eu escrevi** — o dossiê só diz
+"ebook sobre relacionamentos amorosos". Falta o título real, o valor e o link
+de compra. Procure por `id="ebook"` no `index.html`.
+
+### 3d. O que ainda é suposição minha
 
 Estes pontos eu preenchi para o layout funcionar. Confira antes de publicar,
 porque são compromissos com quem contrata:
@@ -116,6 +154,7 @@ Se preferir cortar por conta, salve direto em `assets/img/` com estes nomes:
 | `hero.jpg` | capa, tela cheia | 2000×1300 |
 | `porque.jpg` | bloco "Por que ler o seu mapa?" | 2000×1300 |
 | `divisor-leituras.jpg` | faixa antes das leituras | 2000×900 |
+| `logo.svg` | menu, capa e fecho | vetor, na cor azul |
 | `leitura-mapa.jpg` | card Mapa Astral | 1000×1250 |
 | `leitura-solar.jpg` | card Revolução Solar | 1000×1250 |
 | `leitura-astrocartografia.jpg` | card Astrocartografia | 1000×1250 |
@@ -146,8 +185,7 @@ para outra pasta, é lá que se ajusta.
 
 | Arquivo | Uso |
 | --- | --- |
-| `marca.svg` | símbolo lua/sol do menu e favicon |
-| `estrela.svg` | estrela no meio do nome, na capa |
+| `marca.svg` | símbolo lua/sol usado como favicon |
 | `constelacao.svg` | constelação de marca d'água nos fundos |
 
 ---
@@ -182,5 +220,5 @@ ferramentas/preparar-imagens.py   gera os recortes a partir dos originais
 - Responsivo de 320px até telas grandes.
 - Acessibilidade: navegação por teclado, foco visível, link de pular conteúdo,
   `aria-expanded` no menu e respeito a `prefers-reduced-motion`.
-- Tipografia via Google Fonts: Oswald (títulos), Poppins (texto) e
-  Caveat (manuscrito).
+- Tipografia auto-hospedada: Poiret One (títulos), Jost (texto) e
+  Cormorant Garamond (frases de marca). Nenhuma requisição externa.
