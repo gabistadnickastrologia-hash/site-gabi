@@ -1,0 +1,40 @@
+# Configuração do Netlify
+# O site é estático: o "build" apenas separa o que vai ao ar.
+
+[build]
+  command = "bash ferramentas/publicar.sh"
+  publish = "_site"
+
+# Fontes e imagens têm nome fixo e mudam pouco. Um ano de cache tira
+# essas requisições do caminho em toda visita seguinte.
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# O HTML nunca fica em cache: assim uma correção de preço aparece na hora.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
