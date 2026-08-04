@@ -97,12 +97,10 @@
 
   /* ── a arte vetorial some quando existe fotografia ──────────
      Cada espaço tem um desenho de reserva. Assim que a foto do
-     bloco carrega de verdade, o desenho sai de cena — sem isso os
-     dois ficariam sobrepostos. A roda da capa é exceção: ela foi
-     feita para conviver com a foto. */
+     bloco carrega de verdade, o desenho sai de cena. Sem isso os dois
+     ficam sobrepostos e a capa vira uma disputa: foto, estrelas, roda
+     girando, logo e texto ao mesmo tempo. */
   document.querySelectorAll('.arte').forEach(function (arte) {
-    if (arte.classList.contains('hero__roda')) return;
-
     var alvo = arte.parentElement;
     var fundo = getComputedStyle(alvo).backgroundImage;
     var achou = fundo && fundo.match(/url\(["']?([^"')]+)/);

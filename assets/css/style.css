@@ -272,7 +272,7 @@ a { color: inherit; }
 
 /* na capa */
 .marca--capa { margin: 0 auto; }
-.marca--capa .marca__img { max-height: min(38vh, 300px); margin-inline: auto; }
+.marca--capa .marca__img { max-height: min(31vh, 250px); margin-inline: auto; }
 .marca--capa .marca__nome { font-size: clamp(2.6rem, 1.3rem + 6.4vw, 5.6rem); }
 .marca--capa .marca__tag  { font-size: clamp(.66rem, .56rem + .4vw, .84rem); margin-top: 1rem; }
 
@@ -357,7 +357,8 @@ a { color: inherit; }
   min-height: 100svh;
   display: grid;
   place-items: center;
-  padding: 7rem var(--gutter) 5rem;
+  /* o respiro extra no topo deixa a lua com espaço só dela */
+  padding: 11rem var(--gutter) 6rem;
   text-align: center;
   color: var(--papel);
   overflow: hidden;
@@ -368,26 +369,8 @@ a { color: inherit; }
 .hero__veil {
   position: absolute; inset: 0;
   background:
-    linear-gradient(180deg, rgba(43,36,28,.62) 0%, rgba(43,36,28,.34) 42%, rgba(43,36,28,.78) 100%);
+    linear-gradient(180deg, rgba(16, 39, 58, .58) 0%, rgba(16, 39, 58, .40) 44%, rgba(16, 39, 58, .82) 100%);
 }
-
-.starfield {
-  position: absolute; inset: 0;
-  opacity: .55;
-  background-image:
-    radial-gradient(1.6px 1.6px at 12% 22%, #fff, transparent),
-    radial-gradient(1.3px 1.3px at 78% 16%, #fff, transparent),
-    radial-gradient(1.9px 1.9px at 62% 68%, #fff, transparent),
-    radial-gradient(1.2px 1.2px at 28% 74%, #fff, transparent),
-    radial-gradient(1.5px 1.5px at 88% 52%, #fff, transparent),
-    radial-gradient(1.1px 1.1px at 44% 34%, #fff, transparent),
-    radial-gradient(1.7px 1.7px at 8% 58%, #fff, transparent),
-    radial-gradient(1.2px 1.2px at 92% 82%, #fff, transparent),
-    radial-gradient(1.4px 1.4px at 36% 8%, #fff, transparent),
-    radial-gradient(1.1px 1.1px at 68% 90%, #fff, transparent);
-  animation: cintilar 7s ease-in-out infinite alternate;
-}
-@keyframes cintilar { from { opacity: .3; } to { opacity: .7; } }
 
 .hero__content { position: relative; z-index: 3; max-width: 44rem; }
 
@@ -1029,7 +1012,7 @@ a { color: inherit; }
 
 /* ─── 22. IMPRESSÃO ───────────────────────────────────────── */
 @media print {
-  .nav, .wpp, .hero__scroll, .starfield { display: none !important; }
+  .nav, .wpp, .hero__scroll { display: none !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
   body { background: #fff; color: #000; }
 }

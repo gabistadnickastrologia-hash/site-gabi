@@ -52,7 +52,7 @@ TRABALHOS = [
 
     # capa: a lua sobre a água. Escura, celeste, e você aparece pequena —
     # o texto branco fica legível por cima sem disputar com o seu rosto.
-    ("hero.jpg",                    "lua.jpg",          2000, 1300, 0.50, 0.30, 1.00, 82),
+    ("hero.jpg",                    "lua.jpg",          2000, 1300, 0.50, 0.25, 1.00, 82),
 
     # "Você não está perdida": duna ampla, você à direita.
     # O texto desse bloco entra pela esquerda, então vocês não se cruzam.
