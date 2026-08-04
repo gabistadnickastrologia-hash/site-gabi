@@ -630,6 +630,74 @@ a { color: inherit; }
 .section--azul .specs li:last-child strong,
 .section--noite .specs li:last-child strong { color: var(--azul-claro); }
 
+/* ─── 12. ASTROVIAGEM (ebook) ─────────────────────────────── */
+.ebook__grid {
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1fr);
+  gap: clamp(2.4rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.ebook__capa {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: grid; place-items: center;
+  /* a capa é escura: o degradê de reserva imita esse clima */
+  background: radial-gradient(120% 100% at 50% 18%, #24506E 0%, #16344A 52%, #0C1D2B 100%);
+  box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7);
+}
+.ebook__img { width: 100%; height: 100%; object-fit: cover; display: none; }
+.ebook__capa--ok .ebook__img   { display: block; }
+.ebook__capa--ok .ebook__marca { display: none; }
+.ebook__capa--ok { background: none; }
+
+/* nome desenhado, enquanto a capa não estiver no lugar */
+.ebook__marca {
+  font-family: var(--display);
+  font-size: clamp(1.4rem, .9rem + 1.9vw, 2.3rem);
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--azul-claro);
+  padding-inline: 1rem;
+  text-align: center;
+}
+
+.ebook__linha {
+  font-size: clamp(1.25rem, 1.05rem + .9vw, 1.75rem);
+  color: var(--azul-claro);
+  margin: -.7rem 0 1.8rem;
+}
+
+.ebook__rotulo {
+  font-size: .74rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--azul-claro);
+  margin: 2.2rem 0 1.2rem;
+}
+
+.ebook__para {
+  font-size: .95rem;
+  opacity: .88;
+  margin: 1.8rem 0 2.2rem;
+  max-width: 44ch;
+}
+
+.citacao--claro {
+  color: var(--papel);
+  border-left-color: var(--azul-claro);
+  margin-top: 2.4rem;
+  max-width: 42ch;
+}
+
+@media (max-width: 860px) {
+  .ebook__grid { grid-template-columns: 1fr; }
+  .ebook__capa { aspect-ratio: 4 / 3; max-height: 420px; }
+}
+
 /* ─── 13. PASSOS ──────────────────────────────────────────── */
 .steps { list-style: none; margin: 0; padding: 0; counter-reset: passo; }
 .step {

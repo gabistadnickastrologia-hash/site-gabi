@@ -87,11 +87,20 @@ sozinho, então basta um arquivo.
 Enquanto o arquivo não existir, aparece o nome composto em Poiret One, que é da
 mesma família de formas do logotipo. O site nunca mostra ícone quebrado.
 
-### 3c. O ebook
+### 3c. Astroviagem ✔ já configurado
 
-Está no site com um título e um texto que **eu escrevi** — o dossiê só diz
-"ebook sobre relacionamentos amorosos". Falta o título real, o valor e o link
-de compra. Procure por `id="ebook"` no `index.html`.
+O ebook está no site com o texto oficial e o botão apontando para a Eduzz
+(`https://chk.eduzz.com/7WXQ3KKG9A`). Procure por `id="astroviagem"` no
+`index.html`.
+
+Falta só a **capa**: salve em `assets/img/astroviagem.jpg`, no formato
+retrato (recomendo 1000×1330).
+
+> A arte que você me mandou é o **post de lançamento**, com "Amanhã! 16 de
+> dezembro" e "coloca um lembrete". Num site essa data vence e passa a
+> depor contra a venda. Use um mockup limpo — só o tablet com a capa, sem a
+> chamada de data. Enquanto não houver arquivo, aparece o nome desenhado
+> sobre um fundo escuro, no clima da capa.
 
 ### 3d. O que ainda é suposição minha
 
@@ -155,6 +164,7 @@ Se preferir cortar por conta, salve direto em `assets/img/` com estes nomes:
 | `porque.jpg` | bloco "Por que ler o seu mapa?" | 2000×1300 |
 | `divisor-leituras.jpg` | faixa antes das leituras | 2000×900 |
 | `logo.svg` | menu, capa e fecho | vetor, na cor azul |
+| `astroviagem.jpg` | capa do ebook | retrato, 1000×1330 |
 | `leitura-mapa.jpg` | card Mapa Astral | 1000×1250 |
 | `leitura-solar.jpg` | card Revolução Solar | 1000×1250 |
 | `leitura-astrocartografia.jpg` | card Astrocartografia | 1000×1250 |

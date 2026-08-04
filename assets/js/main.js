@@ -83,17 +83,17 @@
   /* ── logo: só troca o texto pela imagem depois que ela carregar ──
      Assim, se o arquivo do logo não existir, ninguém vê ícone
      quebrado — fica o nome composto na fonte da marca. */
-  document.querySelectorAll('.marca').forEach(function (marca) {
-    var img = marca.querySelector('.marca__img');
-    if (!img) return;
-    if (img.complete && img.naturalWidth > 0) {
-      marca.classList.add('marca--ok');
-    } else {
-      img.addEventListener('load', function () {
-        if (img.naturalWidth > 0) marca.classList.add('marca--ok');
-      });
-    }
-  });
+  function trocarQuandoCarregar(seletor, imgSeletor, classe) {
+    document.querySelectorAll(seletor).forEach(function (caixa) {
+      var img = caixa.querySelector(imgSeletor);
+      if (!img) return;
+      function ok() { if (img.naturalWidth > 0) caixa.classList.add(classe); }
+      if (img.complete) ok(); else img.addEventListener('load', ok);
+    });
+  }
+
+  trocarQuandoCarregar('.marca', '.marca__img', 'marca--ok');
+  trocarQuandoCarregar('.ebook__capa', '.ebook__img', 'ebook__capa--ok');
 
   /* ── ano do rodapé ───────────────────────────────────── */
   var ano = document.getElementById('ano');
