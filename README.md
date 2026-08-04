@@ -109,9 +109,8 @@ depor contra a venda.
 Estes pontos eu preenchi para o layout funcionar. Confira antes de publicar,
 porque são compromissos com quem contrata:
 
-- **Duração de cada leitura** (1h30 no mapa natal, 1h nas outras);
-- **O que é entregue** (PDF, gravação, 7 dias de dúvidas abertas);
-- **Prazos de entrega** (gravação em 24h, material em 5 dias úteis);
+- **Duração de cada consulta** (1h30 no mapa natal, 1h nas outras);
+- **Os 7 dias de dúvidas abertas** depois da consulta;
 - **Formas de pagamento** citadas nas perguntas frequentes (Pix e cartão,
   remarcação com 24h de aviso);
 - **Condição especial** para quem fecha mais de uma leitura — está no site
