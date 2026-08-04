@@ -100,18 +100,22 @@ a { color: inherit; }
 }
 
 /* ─── 3. TIPOGRAFIA ────────────────────────────────────────── */
-/* Poiret One existe só no peso 400. Pedir 600 faria o navegador
-   engordar a fonte artificialmente e sujar o traço fino. */
+/* Os títulos usam Jost 500, não a fonte do logo. Poiret One tem traço
+   fio de cabelo: casa com o logotipo, mas em corpo grande some da
+   página. Jost é geométrica da mesma família de formas, então a
+   coerência se mantém — e o título ganha presença.
+   Poiret One fica reservada à marca e à faixa das consultas, que é
+   onde o traço fino funciona. */
 .display {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(2rem, 1.25rem + 3.3vw, 3.9rem);
-  line-height: 1.06;
-  letter-spacing: .03em;
+  font-family: var(--corpo);
+  font-weight: 500;
+  font-size: clamp(1.85rem, 1.2rem + 2.9vw, 3.5rem);
+  line-height: 1.1;
+  letter-spacing: .005em;
   margin: 0 0 1.7rem;
   text-wrap: balance;
 }
-.display--stack { line-height: 1.12; letter-spacing: .02em; }
+.display--stack { line-height: 1.14; letter-spacing: 0; }
 
 /* voz das frases de marca */
 .frase {
@@ -375,8 +379,13 @@ a { color: inherit; }
 .hero__content { position: relative; z-index: 3; max-width: 44rem; }
 
 .hero__frase {
-  font-size: clamp(1.4rem, 1.05rem + 1.7vw, 2.35rem);
-  color: var(--azul-claro);
+  font-size: clamp(1.5rem, 1.1rem + 1.9vw, 2.5rem);
+  /* branco em vez do azul-claro, e peso 400: Cormorant é serifa de traço
+     fino, e no peso 300 sobre a água em movimento os traços desaparecem.
+     A sombra suave descola a frase da foto sem virar contorno. */
+  color: var(--papel);
+  font-weight: 400;
+  text-shadow: 0 1px 14px rgba(8, 20, 30, .55);
   margin: 2.6rem 0 0;
 }
 
