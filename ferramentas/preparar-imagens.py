@@ -3,10 +3,16 @@
 Prepara as fotos do site a partir dos originais.
 
 Uso:
-    1. salve as três fotos em  fotos-originais/  com estes nomes:
-         janela.jpg   → retrato na janela, camisa branca, xícara
-         varanda.jpg  → em pé na porta da varanda, calça bege
-         grama.jpg    → sentada na grama lendo a carta, com os livros
+    1. salve as fotos em  fotos-originais/  com estes nomes:
+         lua.jpg          → praia à noite, a lua sobre a água, você de costas
+         duna-ampla.jpg   → duna aberta, montanhas ao fundo, você pequena
+                            à direita
+         duna-camisa.jpg  → duna, camisa branca aberta, mãos nos bolsos
+         duna-olhar.jpg   → duna, olhando por cima do ombro
+         sorriso.jpg      → retrato próximo, camisa branca, sorrindo para
+                            a câmera
+         escritorio.jpg   → sentada na poltrona com o notebook e os livros
+                            de astrologia na mesinha
     2. rode:  python3 ferramentas/preparar-imagens.py
     3. os arquivos prontos aparecem em  assets/img/
 
@@ -41,23 +47,38 @@ DESTINO = RAIZ / "assets" / "img"
 #
 # Se algum recorte ficar ruim, mexa só nesses três números.
 TRABALHOS = [
-    # capa: a varanda dá o respiro à esquerda para o nome no centro
-    ("hero.jpg",                    "varanda.jpg", 2000, 1300, 0.72, 0.35, 1.00, 82),
+    # ── espaços largos: só fotos com bastante cenário funcionam aqui,
+    #    porque um retrato vertical cortado em faixa perde quase tudo ──
 
-    # "por que ler o seu mapa": aproxima e te joga para a esquerda,
-    # porque o texto desse bloco entra pela direita
-    ("porque.jpg",                  "grama.jpg",   2000, 1300, 0.66, 0.45, 0.78, 82),
+    # capa: a lua sobre a água. Escura, celeste, e você aparece pequena —
+    # o texto branco fica legível por cima sem disputar com o seu rosto.
+    ("hero.jpg",                    "lua.jpg",          2000, 1300, 0.50, 0.34, 1.00, 82),
 
-    # faixa antes das leituras: os livros e a carta na grama
-    ("divisor-leituras.jpg",        "grama.jpg",   2000,  900, 0.50, 0.72, 1.00, 82),
+    # "Você não está perdida": duna ampla, você à direita.
+    # O texto desse bloco entra pela esquerda, então vocês não se cruzam.
+    ("padrao.jpg",                  "duna-ampla.jpg",   2000, 1300, 0.62, 0.52, 1.00, 82),
 
-    # cards das três leituras (verticais)
-    ("leitura-mapa.jpg",            "janela.jpg",  1000, 1250, 0.58, 0.35, 1.00, 84),
-    ("leitura-solar.jpg",           "varanda.jpg", 1000, 1250, 0.72, 0.30, 1.00, 84),
-    ("leitura-astrocartografia.jpg","grama.jpg",   1000, 1250, 0.52, 0.45, 1.00, 84),
+    # faixa antes das leituras: só o reflexo da lua na água, sem ninguém.
+    # É um respiro entre blocos — pessoa ali brigaria com o título.
+    ("divisor-leituras.jpg",        "lua.jpg",          2000,  900, 0.48, 0.22, 1.00, 82),
+
+    # ── retratos verticais ──
+
+    # Quem é a Gabi: olhando para a câmera. É a seção que fala de você.
+    ("sobre.jpg",                   "sorriso.jpg",      1000, 1250, 0.55, 0.34, 1.00, 84),
+
+    # Mapa Astral: você trabalhando, com os livros de astrologia ao lado.
+    # Mostra a leitura acontecendo, que é o que o card vende.
+    ("leitura-mapa.jpg",            "escritorio.jpg",   1000, 1250, 0.58, 0.40, 1.00, 84),
+
+    # Revolução Solar: duna ao entardecer, postura firme.
+    ("leitura-solar.jpg",           "duna-camisa.jpg",  1000, 1250, 0.62, 0.34, 1.00, 84),
+
+    # Astrocartografia: horizonte e distância — o assunto é lugar.
+    ("leitura-astrocartografia.jpg","duna-olhar.jpg",   1000, 1250, 0.48, 0.30, 1.00, 84),
 
     # miniatura de compartilhamento (WhatsApp, Instagram, Google)
-    ("og.jpg",                      "janela.jpg",  1200,  630, 0.58, 0.35, 1.00, 80),
+    ("og.jpg",                      "sorriso.jpg",      1200,  630, 0.55, 0.34, 0.85, 80),
 ]
 
 

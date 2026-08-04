@@ -440,6 +440,28 @@ a { color: inherit; }
 }
 .watermark .wrap { position: relative; z-index: 2; }
 
+/* ─── 8b. QUEM É A GABI ───────────────────────────────────── */
+.sobre__grid {
+  display: grid;
+  grid-template-columns: minmax(0, .78fr) minmax(0, 1fr);
+  gap: clamp(2.2rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.sobre__foto {
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius);
+  background-size: cover;
+  background-position: center 22%;
+  box-shadow: 0 26px 52px -30px rgba(16, 41, 58, .55);
+  position: sticky;
+  top: 6rem;
+}
+
+@media (max-width: 860px) {
+  .sobre__grid { grid-template-columns: 1fr; }
+  .sobre__foto { aspect-ratio: 3 / 2; position: static; }
+}
+
 /* ─── 9. BLOCO COM FOTO SANGRADA ──────────────────────────── */
 .feature {
   position: relative;
@@ -927,9 +949,11 @@ a { color: inherit; }
    regras de fundo definidas antes, sem precisar de !important.
    ──────────────────────────────────────────────────────────── */
 .hero    { background-image: url('../img/hero.jpg'),             var(--degrade-capa); }
-#porque  { background-image: url('../img/porque.jpg'), var(--degrade-bloco); }
+#padrao  { background-image: url('../img/padrao.jpg'),  var(--degrade-bloco); }
 
 .divider { background-image: url('../img/divisor-leituras.jpg'), var(--degrade-faixa); }
+
+#sobre .sobre__foto  { background-image: url('../img/sobre.jpg'),   var(--degrade-card); }
 
 .card__media--mapa   { background-image: url('../img/leitura-mapa.jpg'),            var(--degrade-card); }
 .card__media--solar  { background-image: url('../img/leitura-solar.jpg'),           var(--degrade-card); }

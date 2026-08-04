@@ -151,13 +151,16 @@ tons de areia com arte vetorial. Para colocar as suas, há dois caminhos.
 
 ### Caminho fácil: o script faz os recortes
 
-1. Salve as três fotos originais, **sem cortar**, em `fotos-originais/`:
+1. Salve as fotos originais, **sem cortar**, em `fotos-originais/`:
 
    | Nome do arquivo | Qual foto |
    | --- | --- |
-   | `janela.jpg` | retrato na janela, camisa branca, segurando a xícara |
-   | `varanda.jpg` | em pé na porta da varanda, calça bege, de perfil |
-   | `grama.jpg` | sentada na grama lendo a carta, com os livros ao lado |
+   | `lua.jpg` | praia à noite, a lua sobre a água, você de costas |
+   | `duna-ampla.jpg` | duna aberta, montanhas ao fundo, você pequena à direita |
+   | `duna-camisa.jpg` | duna, camisa branca aberta, mãos nos bolsos |
+   | `duna-olhar.jpg` | duna, olhando por cima do ombro |
+   | `sorriso.jpg` | retrato próximo, camisa branca, sorrindo para a câmera |
+   | `escritorio.jpg` | sentada na poltrona com o notebook e os livros de astrologia |
 
 2. Rode, na pasta do projeto:
 
@@ -166,13 +169,30 @@ tons de areia com arte vetorial. Para colocar as suas, há dois caminhos.
    python3 ferramentas/preparar-imagens.py
    ```
 
-O script gera os sete recortes em `assets/img/`, cada um na proporção do
+O script gera os oito recortes em `assets/img/`, cada um na proporção do
 espaço onde vai aparecer, já comprimido. Ele mantém o rosto dentro do quadro
 e não altera os originais.
 
+**Por que cada foto foi para cada lugar** — os espaços largos (capa, bloco do
+padrão, faixa) só funcionam com fotos de bastante cenário: um retrato vertical
+cortado em faixa horizontal perde quase tudo. Por isso a lua e a duna ampla
+foram para os blocos largos, e os retratos foram para os cards verticais.
+
+- **capa** → a lua sobre a água. Escura e celeste, e você aparece pequena, então
+  o nome em branco fica legível sem disputar com o seu rosto.
+- **"Você não está perdida"** → duna ampla, você à direita. O texto desse bloco
+  entra pela esquerda; vocês não se cruzam.
+- **faixa antes das leituras** → só o reflexo da lua, sem ninguém. É um respiro.
+- **Quem é a Gabi** → o retrato olhando para a câmera, que é a seção que fala
+  de você.
+- **card Mapa Astral** → você com o notebook e os livros: mostra a leitura
+  acontecendo.
+- **card Revolução Solar** → duna ao entardecer, postura firme.
+- **card Astrocartografia** → horizonte e distância, porque o assunto é lugar.
+
 Se algum recorte ficar ruim, abra `ferramentas/preparar-imagens.py` e mexa nos
-três números da linha correspondente: **foco x**, **foco y** e **aproximação**.
-Cada linha tem um comentário dizendo para que serve aquela imagem.
+três números da linha: **foco x**, **foco y** e **aproximação**. Cada linha tem
+um comentário dizendo para que serve aquela imagem.
 
 ### Caminho manual: salvar já cortado
 
@@ -181,7 +201,8 @@ Se preferir cortar por conta, salve direto em `assets/img/` com estes nomes:
 | Arquivo | Onde aparece | Formato |
 | --- | --- | --- |
 | `hero.jpg` | capa, tela cheia | 2000×1300 |
-| `porque.jpg` | bloco "Por que ler o seu mapa?" | 2000×1300 |
+| `padrao.jpg` | bloco "Você não está perdida" | 2000×1300 |
+| `sobre.jpg` | retrato em "Quem é a Gabi" | 1000×1250 |
 | `divisor-leituras.jpg` | faixa antes das leituras | 2000×900 |
 | `logo.svg` | menu, capa e fecho | vetor, na cor azul |
 | `astroviagem.jpg` | capa do ebook | retrato, 1000×1330 |
