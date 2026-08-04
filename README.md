@@ -234,10 +234,23 @@ para outra pasta, é lá que se ajusta.
 
 ### Arte vetorial já incluída
 
+Enquanto não há fotografia, cada espaço mostra um desenho tirado do
+instrumento da profissão — não é preenchimento, é a página se sustentando
+sozinha. Quando a foto entrar, ela vem por cima e a arte desaparece junto
+com o degradê.
+
 | Arquivo | Uso |
 | --- | --- |
+| `roda-astral.svg` | roda do mapa: capa (girando devagar), bloco do padrão e card do Mapa Astral |
+| `arte-solar.svg` | anel do ano solar, no card da Revolução Solar |
+| `arte-astro.svg` | globo com meridianos e linhas planetárias: card da Astrocartografia e capa do Astroviagem |
+| `arte-faixa.svg` | régua de graus, na faixa antes das leituras |
+| `constelacao.svg` | constelação: marca d'água dos fundos e retrato de "Quem é a Gabi" |
 | `marca.svg` | símbolo lua/sol usado como favicon |
-| `constelacao.svg` | constelação de marca d'água nos fundos |
+
+Todos são gerados por script, com geometria calculada — não são traços
+desenhados a olho. A roda tem os doze signos, a régua de graus de cinco em
+cinco, as cúspides das casas e as linhas de aspecto entre os planetas.
 
 ---
 

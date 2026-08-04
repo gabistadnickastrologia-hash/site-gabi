@@ -389,7 +389,7 @@ a { color: inherit; }
 }
 @keyframes cintilar { from { opacity: .3; } to { opacity: .7; } }
 
-.hero__content { position: relative; z-index: 2; max-width: 44rem; }
+.hero__content { position: relative; z-index: 3; max-width: 44rem; }
 
 .hero__frase {
   font-size: clamp(1.4rem, 1.05rem + 1.7vw, 2.35rem);
@@ -677,6 +677,7 @@ a { color: inherit; }
 
 /* nome desenhado, enquanto a capa não estiver no lugar */
 .ebook__marca {
+  position: relative; z-index: 2;
   font-family: var(--display);
   font-size: clamp(1.4rem, .9rem + 1.9vw, 2.3rem);
   letter-spacing: .16em;
@@ -958,6 +959,69 @@ a { color: inherit; }
 .card__media--mapa   { background-image: url('../img/leitura-mapa.jpg'),            var(--degrade-card); }
 .card__media--solar  { background-image: url('../img/leitura-solar.jpg'),           var(--degrade-card); }
 .card__media--astro  { background-image: url('../img/leitura-astrocartografia.jpg'), var(--degrade-card); }
+
+/* ─── 24. ARTE DOS ESPAÇOS SEM FOTO ───────────────────────────
+   Enquanto não há fotografia, cada espaço recebe um desenho seu,
+   tirado do instrumento da profissão: a roda do mapa, o anel do
+   ano solar, o globo com as linhas da astrocartografia, a régua de
+   graus. Não é preenchimento — é a página se sustentando sozinha.
+
+   Quando a foto entrar, ela vem por cima (a regra da seção 23 vence
+   por vir depois) e a arte some junto com o degradê.
+   ──────────────────────────────────────────────────────────── */
+.arte {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background: currentColor;
+  -webkit-mask-position: center; mask-position: center;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-size: contain;    mask-size: contain;
+}
+
+.arte--roda   { -webkit-mask-image: url('../img/roda-astral.svg'); mask-image: url('../img/roda-astral.svg'); }
+.arte--solar  { -webkit-mask-image: url('../img/arte-solar.svg');  mask-image: url('../img/arte-solar.svg'); }
+.arte--astro  { -webkit-mask-image: url('../img/arte-astro.svg');  mask-image: url('../img/arte-astro.svg'); }
+.arte--constelacao { -webkit-mask-image: url('../img/constelacao.svg'); mask-image: url('../img/constelacao.svg'); }
+.arte--faixa  { -webkit-mask-image: url('../img/arte-faixa.svg');  mask-image: url('../img/arte-faixa.svg');
+                -webkit-mask-size: 130% auto; mask-size: 130% auto; }
+
+/* na capa: a roda gira devagar atrás do nome */
+.hero__roda {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: min(94vh, 108vw); aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  color: var(--azul-claro);
+  opacity: .17;
+  animation: girar 240s linear infinite;
+}
+
+@keyframes girar { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+/* nos cards: a arte ocupa o quadro, discreta sob o degradê */
+.card__media .arte { color: var(--papel); opacity: .3; padding: 12%; inset: 0; }
+.card__media .arte::after { content: none; }
+
+/* na faixa divisória */
+.divider .arte { color: var(--papel); opacity: .28; }
+
+/* no bloco escuro do padrão */
+.feature .arte {
+  color: var(--azul-claro);
+  opacity: .16;
+  left: auto; right: -6%;
+  width: min(62%, 620px);
+  top: 50%; transform: translateY(-50%); bottom: auto;
+  aspect-ratio: 1;
+}
+.feature--left .arte { right: -6%; }
+
+/* no retrato de "Quem é a Gabi" */
+.sobre__foto { position: relative; overflow: hidden; }
+.sobre__foto .arte { color: var(--papel); opacity: .3; padding: 14%; }
+
+/* na capa do ebook */
+.ebook__capa .arte { color: var(--azul-claro); opacity: .24; padding: 16%; }
 
 /* ─── 22. IMPRESSÃO ───────────────────────────────────────── */
 @media print {
