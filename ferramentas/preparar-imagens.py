@@ -8,7 +8,7 @@ Uso:
          duna-ampla.jpg   → duna aberta, montanhas ao fundo, você pequena
                             à direita
          duna-camisa.jpg  → duna, camisa branca aberta, mãos nos bolsos
-         duna-olhar.jpg   → duna, olhando por cima do ombro
+         duna-sentada.jpg → duna, sentada de pernas cruzadas
          sorriso.jpg      → retrato próximo, camisa branca, sorrindo para
                             a câmera
          escritorio.jpg   → sentada na poltrona com o notebook e os livros
@@ -52,15 +52,15 @@ TRABALHOS = [
 
     # capa: a lua sobre a água. Escura, celeste, e você aparece pequena —
     # o texto branco fica legível por cima sem disputar com o seu rosto.
-    ("hero.jpg",                    "lua.jpg",          2000, 1300, 0.50, 0.34, 1.00, 82),
+    ("hero.jpg",                    "lua.jpg",          2000, 1300, 0.50, 0.30, 1.00, 82),
 
     # "Você não está perdida": duna ampla, você à direita.
     # O texto desse bloco entra pela esquerda, então vocês não se cruzam.
-    ("padrao.jpg",                  "duna-ampla.jpg",   2000, 1300, 0.62, 0.52, 1.00, 82),
+    ("padrao.jpg",                  "duna-ampla.jpg",   2000, 1300, 0.62, 0.44, 1.00, 82),
 
     # faixa antes das leituras: só o reflexo da lua na água, sem ninguém.
     # É um respiro entre blocos — pessoa ali brigaria com o título.
-    ("divisor-leituras.jpg",        "lua.jpg",          2000,  900, 0.48, 0.22, 1.00, 82),
+    ("divisor-leituras.jpg",        "lua.jpg",          2000,  900, 0.48, 0.17, 1.00, 82),
 
     # ── retratos verticais ──
 
@@ -75,7 +75,7 @@ TRABALHOS = [
     ("leitura-solar.jpg",           "duna-camisa.jpg",  1000, 1250, 0.62, 0.34, 1.00, 84),
 
     # Astrocartografia: horizonte e distância — o assunto é lugar.
-    ("leitura-astrocartografia.jpg","duna-olhar.jpg",   1000, 1250, 0.48, 0.30, 1.00, 84),
+    ("leitura-astrocartografia.jpg","duna-sentada.jpg", 1000, 1250, 0.50, 0.42, 1.00, 84),
 
     # miniatura de compartilhamento (WhatsApp, Instagram, Google)
     ("og.jpg",                      "sorriso.jpg",      1200,  630, 0.55, 0.34, 0.85, 80),

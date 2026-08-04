@@ -77,30 +77,32 @@ Se quiser mostrar parcelamento, é só escrever na mesma linha:
 <li data-icon="valor"><strong>R$350 à vista</strong> ou 3x R$120</li>
 ```
 
-### 3b. O logo
+### 3b. O logo ✔ já configurado
 
-Salve o logo em `assets/img/logo.svg` (ou `.png` com fundo transparente,
-trocando a extensão nas três linhas `marca__img` do `index.html`). Use a
-**versão azul** — sobre os fundos escuros o site a converte para branco
-sozinho, então basta um arquivo.
+Está em `assets/img/logo.png`, com fundo transparente.
 
-Enquanto o arquivo não existir, aparece o nome composto em Poiret One, que é da
-mesma família de formas do logotipo. O site nunca mostra ícone quebrado.
+Os dois arquivos enviados (`GS_bluelogo_whitecolorbackground` e
+`GS_whitelogo_bluecolorbackground`) tinham **fundo opaco**, apesar de serem
+PNG — sobre a foto escura da capa apareceria um retângulo. Extraí a
+transparência da versão azul calculando o alfa a partir do canal vermelho,
+que é o de maior variação entre o azul do logo e o branco do fundo; assim as
+curvas finas mantêm o antisserrilhado.
+
+Basta esse arquivo: sobre fundo escuro o CSS converte o azul para branco. Se
+um dia trocar o logo, mantenha o nome `logo.png` e o fundo transparente.
+
+Esses arquivos também deram o **azul exato da marca**: `#35729C`.
 
 ### 3c. Astroviagem ✔ já configurado
 
-O ebook está no site com o texto oficial e o botão apontando para a Eduzz
-(`https://chk.eduzz.com/7WXQ3KKG9A`). Procure por `id="astroviagem"` no
-`index.html`.
+O ebook está no site com o texto oficial, a capa e o botão apontando para a
+Eduzz (`https://chk.eduzz.com/7WXQ3KKG9A`). Procure por `id="astroviagem"`.
 
-Falta só a **capa**: salve em `assets/img/astroviagem.jpg`, no formato
-retrato (recomendo 1000×1330).
-
-> A arte que você me mandou é o **post de lançamento**, com "Amanhã! 16 de
-> dezembro" e "coloca um lembrete". Num site essa data vence e passa a
-> depor contra a venda. Use um mockup limpo — só o tablet com a capa, sem a
-> chamada de data. Enquanto não houver arquivo, aparece o nome desenhado
-> sobre um fundo escuro, no clima da capa.
+A capa (`assets/img/astroviagem.jpg`) foi extraída do anúncio de feed: o
+script isola o livro, corta acima da caixa de texto branca e recompõe sobre
+o mesmo azul do anúncio, em retrato 3:4. Assim a peça de venda com data e
+botão "comprar agora" não vai para o site — num site a data vence e passa a
+depor contra a venda.
 
 ### 3d. O que ainda é suposição minha
 

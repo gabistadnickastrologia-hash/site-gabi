@@ -17,17 +17,17 @@
      Se o azul não estiver exato, corrija SÓ a linha --azul e o
      resto da paleta acompanha.
      ──────────────────────────────────────────────────────────── */
-  --azul:          #3B76A4;   /* o azul do logo */
-  --azul-fundo:    #2C5C82;   /* um passo mais fundo, para fundos chapados */
-  --azul-noite:    #12293B;   /* quase preto azulado, seções de contraste */
-  --azul-claro:    #8FB6D2;   /* para texto e traços sobre fundo escuro */
-  --bruma:         #DDE8F0;   /* azul lavado, seções claras */
+  --azul:          #35729C;   /* o azul exato do logo, tirado do arquivo */
+  --azul-fundo:    #28587A;   /* um passo mais fundo, para fundos chapados */
+  --azul-noite:    #10273A;   /* quase preto azulado, seções de contraste */
+  --azul-claro:    #8CB4D2;   /* para texto e traços sobre fundo escuro */
+  --bruma:         #DCE7F0;   /* azul lavado, seções claras */
   --papel:         #F4F8FA;   /* off-white puxado para o azul */
-  --tinta:         #10293A;   /* texto sobre fundo claro */
+  --tinta:         #0F2839;   /* texto sobre fundo claro */
 
   /* traços e divisórias */
-  --linha-escura:  rgba(16, 41, 58, .22);
-  --linha-clara:   rgba(221, 232, 240, .26);
+  --linha-escura:  rgba(15, 40, 57, .22);
+  --linha-clara:   rgba(220, 231, 240, .26);
 
   /* ── tipografia ─────────────────────────────────────────────
      Poiret One tem a mesma construção geométrica do logo: traço
@@ -49,10 +49,10 @@
   --ease: cubic-bezier(.22, 1, .36, 1);
 
   /* fundos de reserva, enquanto não houver foto */
-  --degrade-capa:  radial-gradient(125% 95% at 50% 10%, #2C5C82 0%, #1B3F5B 46%, #12293B 100%);
-  --degrade-bloco: linear-gradient(145deg, #2C5C82 0%, #1B3F5B 55%, #12293B 100%);
-  --degrade-faixa: linear-gradient(120deg, #3B76A4 0%, #12293B 100%);
-  --degrade-card:  linear-gradient(160deg, #8FB6D2 0%, #3B76A4 52%, #1B3F5B 100%);
+  --degrade-capa:  radial-gradient(125% 95% at 50% 10%, #28587A 0%, #1A3C56 46%, #10273A 100%);
+  --degrade-bloco: linear-gradient(145deg, #28587A 0%, #1A3C56 55%, #10273A 100%);
+  --degrade-faixa: linear-gradient(120deg, #35729C 0%, #10273A 100%);
+  --degrade-card:  linear-gradient(160deg, #8CB4D2 0%, #35729C 52%, #1A3C56 100%);
 }
 
 /* ─── 2. BASE ──────────────────────────────────────────────── */
@@ -673,6 +673,7 @@ a { color: inherit; }
 .ebook__img { width: 100%; height: 100%; object-fit: cover; display: none; }
 .ebook__capa--ok .ebook__img   { display: block; }
 .ebook__capa--ok .ebook__marca { display: none; }
+.ebook__capa--ok .arte         { display: none; }
 .ebook__capa--ok { background: none; }
 
 /* nome desenhado, enquanto a capa não estiver no lugar */
@@ -837,7 +838,7 @@ a { color: inherit; }
 /* ─── 17. RODAPÉ ──────────────────────────────────────────── */
 .footer {
   background: var(--azul-noite);
-  color: rgba(221, 232, 240, .82);
+  color: rgba(220, 231, 240, .82);
   padding-block: 2.6rem;
   font-size: .8rem;
 }
@@ -950,7 +951,10 @@ a { color: inherit; }
    regras de fundo definidas antes, sem precisar de !important.
    ──────────────────────────────────────────────────────────── */
 .hero    { background-image: url('../img/hero.jpg'),             var(--degrade-capa); }
-#padrao  { background-image: url('../img/padrao.jpg'),  var(--degrade-bloco); }
+/* o bloco é mais alto que a proporção do recorte, então o navegador
+   corta na vertical: ancorar acima mantém o rosto no quadro */
+#padrao  { background-image: url('../img/padrao.jpg'),  var(--degrade-bloco);
+           background-position: center 30%; }
 
 .divider { background-image: url('../img/divisor-leituras.jpg'), var(--degrade-faixa); }
 

@@ -95,6 +95,24 @@
   trocarQuandoCarregar('.marca', '.marca__img', 'marca--ok');
   trocarQuandoCarregar('.ebook__capa', '.ebook__img', 'ebook__capa--ok');
 
+  /* ── a arte vetorial some quando existe fotografia ──────────
+     Cada espaço tem um desenho de reserva. Assim que a foto do
+     bloco carrega de verdade, o desenho sai de cena — sem isso os
+     dois ficariam sobrepostos. A roda da capa é exceção: ela foi
+     feita para conviver com a foto. */
+  document.querySelectorAll('.arte').forEach(function (arte) {
+    if (arte.classList.contains('hero__roda')) return;
+
+    var alvo = arte.parentElement;
+    var fundo = getComputedStyle(alvo).backgroundImage;
+    var achou = fundo && fundo.match(/url\(["']?([^"')]+)/);
+    if (!achou) return;
+
+    var teste = new Image();
+    teste.onload = function () { arte.style.display = 'none'; };
+    teste.src = achou[1];
+  });
+
   /* ── ano do rodapé ───────────────────────────────────── */
   var ano = document.getElementById('ano');
   if (ano) ano.textContent = new Date().getFullYear();
