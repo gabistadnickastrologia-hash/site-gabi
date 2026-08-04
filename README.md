@@ -258,27 +258,48 @@ cinco, as cúspides das casas e as linhas de aspecto entre os planetas.
 
 ## Como publicar
 
-Qualquer hospedagem de site estático serve. As duas mais simples:
+O site está pronto para o **Netlify**, que é grátis e dá um endereço curto —
+coisa que importa, porque esse link vai para a bio do Instagram.
 
-**GitHub Pages** — em *Settings → Pages*, escolha a branch e a pasta raiz
-(`/`). O site vai ao ar em poucos minutos.
+1. Entre em [netlify.com](https://app.netlify.com) e escolha **Sign up with
+   GitHub** (não precisa criar senha nova).
+2. **Add new site → Import an existing project → GitHub** e escolha o
+   repositório `site-gabi`.
+3. As configurações já vêm preenchidas pelo `netlify.toml` — é só confirmar e
+   clicar em **Deploy**.
+4. Em **Site configuration → Change site name**, troque o nome sorteado por
+   `gabistadnick`. O endereço vira `gabistadnick.netlify.app`.
 
-**Netlify** — arraste a pasta inteira para app.netlify.com/drop. Dá para
-conectar um domínio próprio depois.
+A partir daí, toda vez que algo mudar no repositório o site atualiza sozinho
+em cerca de um minuto.
 
----
+**O que vai ao ar** — o `netlify.toml` roda `ferramentas/publicar.sh`, que
+copia só `index.html` e `assets/` para uma pasta `_site/`. As fotos originais
+(24 MB) e as ferramentas ficam no repositório mas fora do site publicado.
+
+**Alternativa: GitHub Pages.** Em *Settings → Pages*, escolha a branch e a
+pasta raiz. Não precisa de conta nova, mas o endereço fica
+`gabistadnickastrologia-hash.github.io/site-gabi`, e ele publica a pasta
+inteira — inclusive as fotos originais.
+
+**Domínio próprio.** Se um dia quiser `gabistadnick.com.br`, registre no
+[registro.br](https://registro.br) (cerca de R$40 por ano) e aponte para o
+Netlify em *Domain management → Add a domain*. O certificado de segurança sai
+automaticamente.
 
 ## Estrutura
 
 ```
 index.html                        página inteira, comentada seção a seção
+netlify.toml                      configuração da publicação
 assets/css/style.css              design system (paleta, tipos, componentes)
 assets/css/fonts.css              fontes auto-hospedadas
-assets/js/main.js                 menu, revelação ao rolar, FAQ
-assets/img/                       artes vetoriais + onde vão as suas fotos
-assets/fonts/                     Oswald, Poppins e Caveat
+assets/js/main.js                 menu, revelação ao rolar, FAQ, logo
+assets/img/                       fotos tratadas, logo e arte vetorial
+assets/fonts/                     Poiret One, Jost e Cormorant Garamond
 fotos-originais/                  suas fotos sem cortar (não vão para o site)
 ferramentas/preparar-imagens.py   gera os recortes a partir dos originais
+ferramentas/publicar.sh           monta a pasta que vai ao ar
 ```
 
 ## Detalhes técnicos

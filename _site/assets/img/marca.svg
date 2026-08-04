@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" aria-hidden="true">
-  <circle cx="50" cy="50" r="34" stroke="currentColor" stroke-width="2.4"/>
-  <path d="M50 16a34 34 0 0 0 0 68 26 26 0 0 1 0-68Z" fill="currentColor" opacity=".92"/>
-  <path d="M50 4v10M50 86v10M4 50h10M86 50h10" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
-  <path d="M78.6 21.4 71.5 28.5M28.5 71.5l-7.1 7.1M78.6 78.6l-7.1-7.1M28.5 28.5l-7.1-7.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".6"/>
-</svg>
