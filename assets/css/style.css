@@ -670,6 +670,15 @@ a { color: inherit; }
   margin: -.7rem 0 1.8rem;
 }
 
+.ebook__gancho {
+  font-size: clamp(1.06rem, 1rem + .35vw, 1.24rem);
+  font-weight: 500;
+  color: var(--papel);
+  border-bottom: 1px solid var(--linha-clara);
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.6rem !important;
+}
+
 .ebook__rotulo {
   font-size: .74rem;
   font-weight: 500;

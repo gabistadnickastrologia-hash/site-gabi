@@ -124,6 +124,26 @@ calma e ajuste para a sua voz — principalmente a seção **Quem é a gabi**, q
 
 ---
 
+## Como me entregar as imagens
+
+O Google Drive está bloqueado pela política de rede da sessão em que eu
+trabalho — não consigo abrir nenhum link `drive.google.com`. O caminho que
+funciona é pelo próprio repositório, e dá para fazer tudo pelo navegador,
+sem instalar nada:
+
+1. Baixe as imagens do seu Drive para o computador.
+2. Abra o repositório no GitHub e entre na pasta `fotos-originais/`.
+3. Clique em **Add file → Upload files** e arraste tudo.
+4. Escreva qualquer mensagem e clique em **Commit changes**.
+
+Pode subir com os nomes que vierem do Drive — depois disso eu enxergo os
+arquivos, escolho os melhores enquadramentos, gero as versões otimizadas e
+coloco cada uma no lugar certo do site.
+
+As duas que eu mais preciso: o **logo** e a **capa do Astroviagem**.
+
+---
+
 ## Imagens
 
 O site funciona **sem nenhuma foto**: onde falta imagem, aparecem degradês em
