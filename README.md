@@ -110,23 +110,23 @@ o mesmo azul do anúncio, em retrato 3:4. Assim a peça de venda com data e
 botão "comprar agora" não vai para o site — num site a data vence e passa a
 depor contra a venda.
 
-### 3d. O que ainda é suposição minha
+### 3d. Tudo confirmado
 
-Estes pontos eu preenchi para o layout funcionar. Confira antes de publicar,
-porque são compromissos com quem contrata:
+Não há mais nada inventado no site. Valores, combo, durações, o que é
+entregue, prazos, dados pedidos, formas de pagamento, contatos e o ebook
+foram todos confirmados pela Gabi.
 
-- **Duração de cada consulta** (1h30 no mapa natal, 1h nas outras);
-- **Formas de pagamento** citadas nas perguntas frequentes (Pix e cartão,
-  remarcação com 24h de aviso);
-- **Condição especial** para quem fecha mais de uma leitura — está no site
-  sem percentual, só como convite para conversar.
+Se algum serviço mudar, os pontos de edição são:
 
-### 4. Textos
-
-Os textos de "Quem é a gabi", "Por que ler o seu mapa", os passos e as
-perguntas frequentes foram escritos por mim no tom da referência. Leia com
-calma e ajuste para a sua voz — principalmente a seção **Quem é a gabi**, que
-é onde o site fala de você.
+| O quê | Onde procurar no `index.html` |
+| --- | --- |
+| Preço de cada consulta | `data-icon="valor"` |
+| Preço do combo | `combo__valor` (e `combo__antes`, que mostra a economia) |
+| Duração e entregas | `data-icon="tempo"` e `data-icon="entrega"` |
+| Prazo de entrega | `timeline__when` |
+| Dados pedidos | etapa `02` de "Como funciona" |
+| Pagamento | pergunta "Como funciona o pagamento?" |
+| WhatsApp | `5547996434126`, em quatro lugares |
 
 ---
 
