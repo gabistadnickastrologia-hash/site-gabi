@@ -104,8 +104,10 @@ a { color: inherit; }
    fio de cabelo: casa com o logotipo, mas em corpo grande some da
    página. Jost é geométrica da mesma família de formas, então a
    coerência se mantém — e o título ganha presença.
-   Poiret One fica reservada à marca e à faixa das consultas, que é
-   onde o traço fino funciona. */
+   Poiret One fica reservada a dois lugares: a marca e a faixa larga
+   que abre a seção de consultas. Nos dois o texto é grande, curto e
+   decorativo — é onde o traço fino funciona. Todo texto que precisa ser
+   lido (títulos, nomes das consultas, etapas, perguntas) usa Jost. */
 .display {
   font-family: var(--corpo);
   font-weight: 500;
@@ -553,11 +555,11 @@ a { color: inherit; }
 }
 
 .card__title {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(1.65rem, 1.2rem + 1.8vw, 2.5rem);
-  line-height: 1.05;
-  letter-spacing: .03em;
+  font-family: var(--corpo);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.2rem);
+  line-height: 1.1;
+  letter-spacing: 0;
   margin: 0;
 }
 .card__ordem {
@@ -735,10 +737,10 @@ a { color: inherit; }
 }
 .step:last-child { border-bottom: 1px solid var(--linha-escura); }
 .step__title {
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: clamp(1.4rem, 1.15rem + 1.1vw, 1.9rem);
-  letter-spacing: .03em;
+  font-family: var(--corpo);
+  font-weight: 500;
+  font-size: clamp(1.22rem, 1.08rem + .7vw, 1.55rem);
+  letter-spacing: 0;
   margin: 0 0 .6rem;
   display: flex; align-items: baseline; gap: .8rem;
 }
@@ -814,6 +816,18 @@ a { color: inherit; }
   opacity: .8;
 }
 
+/* links dentro do texto corrido */
+.step a,
+.faq__answer a {
+  color: var(--azul-fundo);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color .3s var(--ease);
+}
+.step a:hover,
+.faq__answer a:hover { color: var(--azul); }
+
 /* ─── 15. FAQ ─────────────────────────────────────────────── */
 .faq { max-width: 46rem; }
 .faq__item { border-bottom: 1px solid var(--linha-escura); }
@@ -824,9 +838,9 @@ a { color: inherit; }
   list-style: none;
   padding: 1.35rem 3rem 1.35rem 0;
   position: relative;
-  font-family: var(--display);
-  font-weight: 400;
-  font-size: 1.12rem;
+  font-family: var(--corpo);
+  font-weight: 500;
+  font-size: 1.06rem;
   font-size: clamp(1rem, .94rem + .35vw, 1.18rem);
   letter-spacing: .028em;
   transition: opacity .3s var(--ease);
