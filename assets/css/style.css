@@ -634,6 +634,10 @@ a { color: inherit; }
   -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M12 1c.6 6.2 4.8 10.4 11 11-6.2.6-10.4 4.8-11 11-.6-6.2-4.8-10.4-11-11C7.2 11.4 11.4 7.2 12 1Z'/></svg>");
           mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'><path d='M12 1c.6 6.2 4.8 10.4 11 11-6.2.6-10.4 4.8-11 11-.6-6.2-4.8-10.4-11-11C7.2 11.4 11.4 7.2 12 1Z'/></svg>");
 }
+.specs li[data-icon="audio"]::after {
+  -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round'><path d='M4 10v4M8 7.5v9M12 4.5v15M16 8v8M20 10.5v3'/></svg>");
+          mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linecap='round'><path d='M4 10v4M8 7.5v9M12 4.5v15M16 8v8M20 10.5v3'/></svg>");
+}
 .specs li[data-icon="valor"]::after {
   -webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linejoin='round'><path d='M12 2.4 21.6 12 12 21.6 2.4 12Z'/><circle cx='12' cy='12' r='3.4'/></svg>");
           mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='1.9' stroke-linejoin='round'><path d='M12 2.4 21.6 12 12 21.6 2.4 12Z'/><circle cx='12' cy='12' r='3.4'/></svg>");
@@ -748,6 +752,14 @@ a { color: inherit; }
   font-variant-numeric: tabular-nums;
 }
 .step p { margin: 0; max-width: 58ch; opacity: .95; }
+/* ressalva dentro de uma etapa: recuada e mais discreta que o texto */
+.step__nota {
+  margin-top: .9rem !important;
+  padding-left: 1rem;
+  border-left: 1px solid var(--linha-escura);
+  font-size: .95rem;
+  opacity: .82 !important;
+}
 .step strong { font-weight: 500; }
 
 /* ─── 14. LINHA DO TEMPO ──────────────────────────────────── */
