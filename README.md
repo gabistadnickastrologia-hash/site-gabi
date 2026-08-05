@@ -21,9 +21,11 @@ catálogo enviado como referência.
 | `--papel` | `#F4F8FA` | fundo da página |
 | `--tinta` | `#10293A` | texto sobre claro |
 
-> O azul foi tirado a olho das imagens do logo. Se não estiver exato, corrija
-> **só a linha `--azul`** no topo de `assets/css/style.css` — o resto da paleta
-> acompanha.
+> **Sobre a paleta do brandbook.** O brandbook define outra paleta — azul
+> `#1E3A5F`, areia `#E7E3D4`, cinza `#B0B0B0` e dourado `#C6A76D`. O site não
+> a usa: por decisão da Gabi, valem as cores do logo, e `#35729C` foi extraído
+> do arquivo original, não estimado. Se um dia a paleta do brandbook tiver de
+> prevalecer, corrija **só a linha `--azul`** e os tons derivados acompanham.
 
 **Tipografia** — Poiret One nos títulos (mesma construção geométrica do
 logotipo), Jost no texto corrido e Cormorant Garamond em itálico nas frases de
@@ -110,7 +112,6 @@ Estes pontos eu preenchi para o layout funcionar. Confira antes de publicar,
 porque são compromissos com quem contrata:
 
 - **Duração de cada consulta** (1h30 no mapa natal, 1h nas outras);
-- **Os 7 dias de dúvidas abertas** depois da consulta;
 - **Formas de pagamento** citadas nas perguntas frequentes (Pix e cartão,
   remarcação com 24h de aviso);
 - **Condição especial** para quem fecha mais de uma leitura — está no site
