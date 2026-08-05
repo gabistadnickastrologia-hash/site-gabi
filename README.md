@@ -61,7 +61,7 @@ no `index.html`.
 
 ### 3. Valores ✔ já configurados
 
-| Leitura | Valor |
+| Atendimento | Valor |
 | --- | --- |
 | Mapa Astral | R$350 |
 | Revolução Solar | R$260 |
@@ -209,7 +209,7 @@ Se preferir cortar por conta, salve direto em `assets/img/` com estes nomes:
 | `hero.jpg` | capa, tela cheia | 2000×1300 |
 | `padrao.jpg` | bloco "Você não está perdida" | 2000×1300 |
 | `sobre.jpg` | retrato em "Quem é a Gabi" | 1000×1250 |
-| `divisor-leituras.jpg` | faixa antes das leituras | 2000×900 |
+| `divisor-leituras.jpg` | faixa antes dos atendimentos | 2000×900 |
 | `logo.svg` | menu, capa e fecho | vetor, na cor azul |
 | `astroviagem.jpg` | capa do ebook | retrato, 1000×1330 |
 | `leitura-mapa.jpg` | card Mapa Astral | 1000×1250 |
@@ -250,7 +250,7 @@ com o degradê.
 | `roda-astral.svg` | roda do mapa: capa (girando devagar), bloco do padrão e card do Mapa Astral |
 | `arte-solar.svg` | anel do ano solar, no card da Revolução Solar |
 | `arte-astro.svg` | globo com meridianos e linhas planetárias: card da Astrocartografia e capa do Astroviagem |
-| `arte-faixa.svg` | régua de graus, na faixa antes das leituras |
+| `arte-faixa.svg` | régua de graus, na faixa antes dos atendimentos |
 | `constelacao.svg` | constelação: marca d'água dos fundos e retrato de "Quem é a Gabi" |
 | `marca.svg` | símbolo lua/sol usado como favicon |
 

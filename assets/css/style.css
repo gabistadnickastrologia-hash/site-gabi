@@ -513,7 +513,7 @@ a { color: inherit; }
 }
 
 
-/* ─── 11. CARDS DE LEITURA ────────────────────────────────── */
+/* ─── 11. CARDS DE ATENDIMENTO ────────────────────────────────── */
 .cards { display: grid; gap: clamp(2.6rem, 6vw, 5rem); }
 
 .card {
