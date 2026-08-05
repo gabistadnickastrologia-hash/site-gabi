@@ -105,9 +105,9 @@ a { color: inherit; }
    página. Jost é geométrica da mesma família de formas, então a
    coerência se mantém — e o título ganha presença.
    Poiret One fica reservada a dois lugares: a marca e a faixa larga
-   que abre a seção de consultas. Nos dois o texto é grande, curto e
+   que abre a seção de atendimentos. Nos dois o texto é grande, curto e
    decorativo — é onde o traço fino funciona. Todo texto que precisa ser
-   lido (títulos, nomes das consultas, etapas, perguntas) usa Jost. */
+   lido (títulos, nomes dos atendimentos, etapas, perguntas) usa Jost. */
 .display {
   font-family: var(--corpo);
   font-weight: 500;

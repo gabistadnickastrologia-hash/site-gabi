@@ -120,7 +120,7 @@ Se algum serviço mudar, os pontos de edição são:
 
 | O quê | Onde procurar no `index.html` |
 | --- | --- |
-| Preço de cada consulta | `data-icon="valor"` |
+| Preço de cada atendimento | `data-icon="valor"` |
 | Preço do combo | `combo__valor` (e `combo__antes`, que mostra a economia) |
 | Duração e entregas | `data-icon="tempo"` e `data-icon="entrega"` |
 | Prazo de entrega | `timeline__when` |
