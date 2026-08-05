@@ -66,6 +66,10 @@ no `index.html`.
 | Mapa Astral | R$350 |
 | Revolução Solar | R$260 |
 | Astrocartografia | R$260 |
+| Mapa Astral + Revolução Solar | R$530 |
+
+O combo está no bloco "As duas juntas" — procure por `combo__valor`. Se mudar
+o preço, ajuste também a linha `combo__antes`, que mostra a economia.
 
 Estão no `index.html`, um em cada card. Procure por `data-icon="valor"`:
 
