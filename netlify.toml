@@ -3,7 +3,7 @@
 
 [build]
   command = "bash ferramentas/publicar.sh"
-  publish = "_site"
+  publish = "docs"
 
 # Fontes e imagens têm nome fixo e mudam pouco. Um ano de cache tira
 # essas requisições do caminho em toda visita seguinte.
